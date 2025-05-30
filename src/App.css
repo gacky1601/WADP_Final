@@ -1,0 +1,142 @@
+.App {
+  text-align: center;
+
+}
+
+/* styles.css */
+.PopoverTrigger {
+  background-color: white;
+  border-radius: 4px;
+}
+
+.PopoverContent {
+  border-radius: 4px;
+  padding: 20px;
+  width: 260px;
+  background-color: white;
+}
+
+.PopoverArrow {
+  fill: white;
+}
+
+.sel {
+  margin-left: 10px;
+}
+
+/* Grid樣式 */
+.grid-full {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.grid-80-center {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+@media (min-width: 768px) {
+  .grid-80-center {
+    width: 80%;
+  }
+}
+
+.button-nowrap {
+  white-space: nowrap;
+  overflow: hidden;
+  display: flex;
+}
+
+.card-train-approaching {
+  background: rgba(200, 0, 0, 0.3);
+}
+
+
+header {
+  position: fixed;
+  top: 0rem;
+  width: 100%;
+  height: 3rem; /* 假設 header 高度為 4rem */
+  background-color: #0e0e0e;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 4rem; /* 假設 footer 高度為 4rem */
+  background-color: #0e0e0e;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+}
+
+.flex-grow {
+  padding-top: 3.5rem; /* 預留 header 高度 */
+  padding-bottom: 3rem; /* 預留 footer 高度 */
+}
+
+
+.tab-bar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 4rem;
+  background: rgba(0, 0, 0, 0.9);
+  border-top: 1px solid #000000;
+  backdrop-filter: blur(10px);
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+.tab-button {
+  flex: 1;
+  border: none;
+  background: none;
+  font-size: 0.85rem;
+  color: #ccc;
+  padding: 0rem 0 0.7rem 0; /* ⬆️ 增加上方 padding 避免擠壓 */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tab-button.active {
+  color: #007aff;
+  font-weight: bold;
+}
+
+.circle-line-button {
+  width: 100% !important;
+  aspect-ratio: 1 / 1; /* 👈 保持正方形 */
+  border-radius: 50% !important;
+  padding: 0 !important;
+  font-size: 3.6vw !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  min-width: 40px;
+  min-height: 40px;
+  max-width: 80px;
+  max-height: 80px;
+}
+
+
+.realtime-card-container {
+  width: 90%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding-bottom: 1rem;
+  position: sticky;
+  bottom: 4.5rem; /* 須避開 footer */
+  z-index: 1;
+  max-height: 40vh;           /* ✅ 限制卡片高度 */
+  overflow-y: auto;           /* ✅ 允許滾動 */
+  -webkit-overflow-scrolling: touch; /* ✅ iOS 平滑滾動 */
+}
+
