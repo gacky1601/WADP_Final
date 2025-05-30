@@ -112,8 +112,7 @@ footer {
 }
 
 .circle-line-button {
-  width: 100% !important;
-  aspect-ratio: 1 / 1; /* 👈 保持正方形 */
+  aspect-ratio: 1 / 1;
   border-radius: 50% !important;
   padding: 0 !important;
   font-size: 3.6vw !important;
@@ -125,6 +124,18 @@ footer {
   max-width: 80px;
   max-height: 80px;
 }
+
+@media (min-width: 768px) {
+  .circle-line-button {
+    font-size: 1rem !important;
+    width: 50px !important;
+    height: 50px !important;
+    max-width: 50px !important;
+    max-height: 50px !important;
+  }
+}
+
+
 
 
 .realtime-card-container {

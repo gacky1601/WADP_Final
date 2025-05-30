@@ -76,15 +76,15 @@ export function Metro() {
   const formatCountdown = (timeStr) => {
     const [minutes, seconds] = timeStr.split(":").map(Number);
     if (isNaN(minutes) || isNaN(seconds)) return timeStr;
-  
+
     const paddedSeconds = seconds.toString().padStart(2, "0");
-  
+
     if (minutes === 0) {
       return `${paddedSeconds}秒`;
     }
     return `${minutes}分 ${paddedSeconds}秒`;
   };
-  
+
 
 
 
@@ -93,25 +93,19 @@ export function Metro() {
     <div className="App h-screen flex justify-center items-center">
       <div className='New'>
         <Grid gap="2" className="grid-full">
-          <Grid columns="6" gap="3" width="80%" className="grid-80-center">
+          <Grid columns="6" gap="3" width="98%" className="grid-80-center">
             {metroLines.map((line) => (
-              <Box key={line.name} style={{ width: "100%", paddingTop: "100%", position: "relative" }}>
+              <Box key={line.name} style={{ position: "relative", width: "auto", display: "flex", justifyContent: "center" }}>
                 <Button
                   className="circle-line-button"
                   color={line.color}
                   variant={selectedRoute === line.name ? 'solid' : 'soft'}
                   onClick={() => handleRouteChange(line.name)}
-                  style={{
-                    position: "absolute",
-                    top: 0,
-                    left: 0,
-                    width: "95%",
-                    height: "95%"
-                  }}
                 >
                   {line.label}
                 </Button>
               </Box>
+
             ))}
           </Grid>
 
