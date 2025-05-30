@@ -9,7 +9,7 @@ const LoginPage = ({ onLogin, goToRegister }) => {
     e.preventDefault(); // 防止頁面重新載入
   
     try {
-      const response = await fetch('http://oracle.yupooooo.me:8080/users');
+      const response = await fetch('https://oracle.yupooooo.me/users');
       const users = await response.json();
   
       const matchedUser = users.find(user => user.username === username);
