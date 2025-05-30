@@ -36,6 +36,13 @@ function App() {
     setMode('Home');
   };
 
+  const handleLogout = () => {
+    localStorage.removeItem('user');
+    setUser(null);
+    setPage('main');
+  };
+  
+
   return (
     <div className="App">
       <div className="AppWrapper h-screen flex flex-col">
@@ -43,7 +50,7 @@ function App() {
         {/* 頁首 */}
         <header>
           <div className="header-inner">
-            <BrandHeader user={user} onLoginClick={() => setPage('login')} />
+            <BrandHeader user={user} onLoginClick={() => setPage('login')} onLogout={handleLogout} />
           </div>
         </header>
 
