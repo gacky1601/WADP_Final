@@ -15,10 +15,10 @@ export const BrandHeader = ({ user, onLoginClick, onLogout }) => {
       <Text weight="bold">
         <Avatar
           size="1"
-          src="https://mrt.yupooooo.me/logo512.png"
+          src="https://wadp-final.vercel.app/logo512.png"
           radius="full"
           fallback="T"
-        /> 小豬出行
+        /> 捷運即時通
       </Text>
 
       {!user ? (
