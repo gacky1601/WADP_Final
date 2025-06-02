@@ -52,7 +52,7 @@ const RegisterPage = ({ onRegister, goToLogin }) => {
           <Flex direction="column" gap="3">
             <Text size="4" weight="bold" align="center">註冊</Text>
             <TextField.Input
-              placeholder="姓名"
+              placeholder="使用者名稱"
               value={name}
               onChange={(e) => setName(e.target.value)}
             />
